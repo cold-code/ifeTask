@@ -1,0 +1,55 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  font-family: "Helvetica Neue", "Hiragino Sans GB", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
+}
+.wrapper .main-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrapper .main-content .space-background {
+  width: 500px;
+  height: 500px;
+  background-color: #000;
+}
+#planet {
+  background-color: #00f;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  left: 150px;
+  top: 150px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+}
+.space-ship {
+  width: 100px;
+  height: 36px;
+  position: absolute;
+  line-height: 36px;
+  text-align: center;
+  background-color: #ddd;
+  border-right: 10px solid #00f;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+}
+.control-area {
+  margin-left: 50px;
+}
+.control-area input {
+  font-size: 16px;
+  margin: 5px;
+}
+.control-area textarea {
+  width: 100%;
+}

@@ -1,0 +1,110 @@
+* {
+  margin:          0;
+  padding:         0;
+}
+body  {
+  font-family:     "Helvetica","Arial",sans-serif;
+  font-size:       small;
+  line-height:     2em;
+}
+header {
+  margin-bottom:   1em;
+  width:           100%; 
+  height:          133px;
+  border:          .1em solid #ccc;
+} 
+nav ul {
+  position:        absolute;
+  top:             73px;
+  right:           20px;
+}
+nav ul li{
+  line-height:     70px;
+  float:           left;
+  margin-right:    20px;
+}
+nav ul li a{
+  color:           #EEB422;
+  text-decoration: none;
+}
+h3 {
+  padding-left:    10px;
+  border-left:     3px #ccc solid;
+}
+aside{
+  width:           340px;
+  float:           right;
+  vertical-align:  top;
+  padding:         20px;
+  margin:          20px;
+  box-shadow:      2px 2px 2px #848484
+}
+
+#sup {
+  float: left;
+  display:inline-block;
+  line-height: 100%;
+  margin-right: 10px;
+  margin-bottom: 0px;
+} 
+
+#demand {
+  border:          none;
+  vertical-align:  top;
+  box-shadow:      none;
+  height:          1em;
+  padding-top:     0;
+  margin-top:      0;
+}
+form {
+  border:          none;
+  line-height:     3em;
+}
+
+#send {
+  width:100%;
+  color: #fff;
+  background: #3355D0;
+  cursor:pointer;
+  border-radius: 5px;
+  height: 30px;
+  border:1px solid #3355D0; 
+}
+h1 {
+  position:        absolute;
+  top:             170px;
+  text-align:      center;
+}
+img {
+  line-height:     1.5;
+  vertical-align:  middle;
+  margin:          20px
+}
+div {
+  padding:         30px;
+  border:          .1em  solid #ccc;
+  max-width:       70em;
+  margin:          20px;
+  box-shadow:      2px 2px 2px #848484
+}
+figure {
+  display:         inline-block;
+}
+footer {
+  width:           100%; 
+  height:          50px;
+  border:          .1em solid #ccc;
+  text-align:      center;
+  line-height:     50px; 
+}
+
+footer{
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  background: #000;
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 60px;
+}

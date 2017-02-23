@@ -1,0 +1,118 @@
+#redblock {
+  font-size:12px;
+  font-family:"黑体"；
+}
+#data {
+ font-size:12px;
+ font-family:"黑体";
+}
+blockquote {
+ font-size:116px;
+ font-family:"黑体";
+ font-style:italic;
+ font-weight:bold;
+}
+h1 {
+ font-size:24px;
+ font-family:"黑体";
+ font-weight:lighter;
+}
+.AB {
+  font-size:30px;
+  font-weight:bold;
+}
+#udAB {
+  font-size:12px;
+  font-family:"楷体"
+}
+h2 {
+  font-size:55px;
+  font-family:"黑体";
+}
+h3 {
+  font-size:21px;
+  font-family:"黑体";
+}
+#ABbottom p {
+  font-size:12px;
+  font-family:"黑体";
+}
+.middle_title {
+  font-size:16px;
+  font-family:"黑体";
+  font-weight:bold;
+}
+.middle_text {
+  font-size:12px;
+  font-family:"黑体";
+}
+.sp {
+  font-style:italic;
+  font-size:12px;
+  font-family:"黑体";
+}
+#the {
+   font:72px;
+   font-family:"黑体";
+   font-style:italic;
+   font-weight:bold;
+}
+.udTHE {
+  font-size:42px;
+  font-family:"黑体";
+  font-weight:bold;
+}
+#front p {
+  font-size:33px;
+  font-family:"黑体";
+  font-weight:bold;
+}
+#pic2bottom p {
+  font-size:12px;
+  font-style:italic;
+  font-family:"黑体";
+}
+#pic2bottom span {
+   font-size:26px;
+   font-style:normal;
+   font-family:"黑体";
+}
+#abig {
+   font-size:70px;
+   font-family:"黑体";
+}
+#inpic {
+   font-size:12px;
+   font-family:"宋体";
+}
+#zero {
+   font-size:110px;
+   font-family:"黑体";
+   font-style:normal;
+}
+.qin {
+   font-size:12px;
+   font-family:"宋体";
+   font-style:italic;
+}
+#nus {
+   font-size:21px;
+   font-family:"黑体";
+   font-style:italic;
+}
+#udONE {
+  font-size:12px;
+  font-family:"黑体";
+}
+#top-left {
+  font-size:72px;
+  font-family:"黑体";
+}
+#bottom-right {
+  font-size:72px;
+  font-family:"黑体";
+}
+#footerlove {
+  font-size:12px;
+  font-family:"黑体";
+}

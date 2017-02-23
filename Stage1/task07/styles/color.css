@@ -1,0 +1,49 @@
+
+h1 {
+  color:#4E3A4F;
+}
+header nav ul li {
+   color: #534141;
+}
+li:hover {
+  color:#E53C3C
+}
+
+#logo2 {
+  color: #E53C3C;
+}
+
+#logo2 span {
+  color: #E53C3C;
+}
+
+#udtime,#time{
+  color: #fff;
+}
+#begin:hover {
+  background-color:#c00;
+  }
+.udimg {
+  color: #534141;
+}
+#onpic2 p {
+  color:#fff;
+}
+#search>span{
+  color:#fff;
+}
+#search:hover {
+  background-color:#c00;
+}
+.cell p:hover {
+  color:#c00;
+}
+.option {
+  background-color:#d9d9d9;
+}
+.option a {
+  color:#666;
+}
+.select>span {
+  color:#d9d9d9;
+}

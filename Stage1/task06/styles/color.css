@@ -1,0 +1,99 @@
+body {
+  background-color:#44565C;
+}
+#main {
+  background: #fff
+}
+header {
+  border-color:#938e8c
+}
+#redblock {
+  color: #ffffff;
+  background-color: #EE6363;
+}
+#data {
+  color:#d45d5c
+}
+#left {
+  background: rgba(0,153,0,.1);
+}
+#right {
+  background: rgba(255,51,51,.1);
+}
+#top_right {
+  border-color:#cc8091;
+}
+h1 {
+  color:#000000;
+}
+#udAB {
+  color:#676767;
+}
+blockquote {
+  color:#75b86b;
+}
+#ABbottom {
+  color:#cc8091;
+}
+#whatC {
+  color:#418c59;
+}
+#whenC {
+  color:#d2994f;
+}
+#howC {
+  color:#cc7680;
+}
+.middle_text {
+  color:#767777;
+}
+.sp {
+  color:#cd4a48;
+}
+#front {
+  border-color:#11456b;
+}
+#front p {
+  color:#11456b;
+}
+#the {
+  color:#f5e327;
+}
+.udTHE {
+  color:#11456b;
+}
+#pic2bottom {
+  background: rgba(0,0,204,.3);
+}
+#pic2bottom p {
+  color:#72b16a;
+}
+#pic2bottom span {
+  color:#ffffff;
+}
+#abig {
+  color:#f5e327;
+}
+#inpic {
+  color:#767777;
+}
+#last {
+  background-color:#cccc99;
+  color:#5a5b5b;
+}
+#top-left {
+  color:#d45d5c;
+}
+#bottom-right {
+  color:#d45d5c;
+}
+#footerlove {
+  color:#d45d5c;
+}
+#redzero {
+   background:#EE6363;
+   color:#ffffff;
+}
+#zero {
+   color:#fff
+}

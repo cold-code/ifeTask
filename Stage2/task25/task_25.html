@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task-2-25</title>
+	<style type="text/css">
+		html, body {
+			width: 60%;
+			height: 100%;
+			text-align: center;
+			margin: 0 auto;
+		}
+		button {
+			border:0;
+			box-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+			padding: 4px;
+			margin:20px 5px;
+			cursor: pointer;
+			background-color: #fff;
+		}
+		button:active {
+			box-shadow: 0 0 5px rgba(0,0,0,0.5);
+		}
+		div {
+			padding: 10px;
+			margin: 10px;
+			border: 1px solid #000;
+			background-color: #fff;
+			color: #000;
+			cursor: pointer;
+			text-align: left;
+		}
+		
+		.noshow>div{
+			display: none;
+		}
+		a{
+			display: inline-block;
+			text-decoration: none;
+			width: 1em;
+			line-height: 1;
+			border: 1px solid black;
+			text-align: center;
+			margin: 0 6px 0 0;
+			float: left;
+		}
+		
+		.selected{
+			background-color: rgb(210,210,210);
+		}
+		.default{
+			background-color: #fff;
+			color: black;
+		}
+		.active {
+			background-color: blue;
+			color: #fff;
+		}
+		.found {
+			background-color: red;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<input />
+	<button>深度优先搜索</button>
+	<input />
+	<button>添加节点</button>
+	<button>删除节点</button>
+	<section>
+		<div id="root">
+		产品<a class="display" href="javascript:;">-</a>
+			<div class="noshow">手机<a class="display" href="javascript:;">+</a>
+				<div>Apple<a class="display" href="javascript:;">-</a>
+					<div>iphone4s</div>
+					<div>iphone5s</div>
+					<div>iphone6s</div>
+					<div>iphone6Plus</div>
+				</div>
+				<div>Samsung<a class="display" href="javascript:;">-</a></div>
+				<div>Xiaomi<a class="display" href="javascript:;">-</a></div>
+			</div>
+			<div class="noshow">电脑<a class="display" href="javascript:;">+</a>
+				<div>PC<a class="display" href="javascript:;">-</a></div>
+				<div>NoteBook<a class="display" href="javascript:;">-</a></div>
+				<div>SoftWare<a class="display" href="javascript:;">-</a></div>
+			</div>
+			<div class="noshow">家电<a class="display" href="javascript:;">+</a>
+				<div>电视<a class="display" href="javascript:;">-</a></div>
+				<div>冰箱<a class="display" href="javascript:;">-</a></div>
+				<div>空调<a class="display" href="javascript:;">-</a></div>
+			</div>
+		</div>
+	</section>
+
+	<script type="text/javascript" src="task_25.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+table {
+	margin: 0 auto;
+}
+
+div,td {
+	margin: 0px;
+	padding: 0px;
+}
+
+td {
+	width: 40px;
+	height: 40px;
+	text-align: center;
+}
+
+tr:nth-child(n+2)>td:nth-child(n+2) {
+	border: 1px solid #ccc;
+	margin: -1px;
+	position: relative;
+	left: 0px;
+}
+
+tr:nth-child(n+2)>td:nth-child(n+11) {
+	border-right: 1px solid #000;
+	margin: -1px;
+}
+
+.black1 {
+	border-bottom: 1px solid #000;
+}
+
+.black2 {
+	border-right: 1px solid #000;
+}
+
+.black3 {
+	border-bottom: 1px solid #000 !important;
+	margin-bottom: 10px;
+}
+
+.Left,.Top,.Bottom,.Right {
+	background-color: red; 
+}
+
+.Left div,.Right div,.Top div,.Bottom div {
+	background-color: blue;
+	position: absolute;
+}
+
+.Left div,.Right div {
+	width: 10px;
+	height: 100%;
+	top: 0px;
+}
+
+.Top div,.Bottom div {
+	width: 100%;
+	height: 10px;
+}
+
+.Top div {
+	top: 0px;
+}
+
+.Right div {
+	right: 0px;
+}
+
+.Bottom div {
+	bottom: 0px;
+}
+
+.Left div {
+	left: 0px;
+}
+
+.inputs {
+	margin: 0 auto;
+	width: 200px;
+}

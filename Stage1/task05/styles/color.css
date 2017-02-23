@@ -1,0 +1,25 @@
+body {
+  background-color:   #FFE7BA;
+}
+header {
+  color:              #555;
+  background-color:   #ccffcc;
+}
+div {
+  background-color: 	#ffffcc;
+}
+nav ul li a:hover{
+  color:              gray;
+}
+footer {
+  color:              #555;
+  background-color:   #ccffcc;
+}
+aside {
+  background-color:   #ffffcc;
+}
+#demand {
+  color:              #ccc;
+  background-color:   #ffffcc;
+}
+

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        html{
+            height: 100%;;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            height: 100%;
+        }
+        .circle{
+            border-radius: 400px;
+            border:1px solid #ffffff;
+            position: absolute;
+        }
+        .ship{
+            position: absolute;
+            top:-20px;
+            left:50%;
+            margin-left: -50px;
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            vertical-align: middle;
+            text-align: left;
+            border-radius: 15px;
+            border: 1px solid #ffffff;
+            background-color: #ffff00;
+            font-weight: bold;
+            overflow: hidden;
+        }
+        .energy{
+            width: 100%;
+            height: 100%;
+            background-color: #959593;
+        }
+        .energy span{
+            display: block;
+            position: absolute;
+            z-index: 1;
+            vertical-align: middle;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            color: darkred;
+            text-indent: 0.5em;
+            font-size: 0.8rem;
+        }
+        #track4{
+            width: 650px;
+            height: 650px;
+            top:20px;
+            left:20px;
+        }
+        #track3{
+            width: 550px;
+            height: 550px;
+            top:70px;
+            left:70px;
+        }
+        #track2{
+            width: 450px;
+            height: 450px;
+            top:120px;
+            left:120px;
+        }
+        #track1{
+            width: 350px;
+            height: 350px;
+            top:170px;
+            left:170px;
+        }
+        #earth{
+            background-color: #0000ff;
+            border: none;
+            width: 250px;
+            height: 250px;
+            top:220px;
+            left:220px;
+        }
+        table{
+            background-color: #ffffff;
+            border: 1px solid #000000;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            font-size: 0.8rem;
+        }
+        #console{
+            position: absolute;
+            right: 10px;
+            top:20px;
+            width: 400px;
+            height: 400px;
+            border: 1px solid #ffffff;
+            overflow: scroll;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table>
+
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="radio" name="power" id="p0" value="0" checked="checked"/>
+                        <label for="p0">前进号(速率30能耗5%/s)</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="power" id="p1" value="1"/>
+                        <label for="p1">奔腾号(速率50能耗7%/s)</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="power" id="p2" value="2"/>
+                        <label for="p2">超越号(速率30能耗9%/s)</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="energy" id="e0" value="0" checked="checked"/>
+                        <label for="e0">劲量型充能速度2%/s)</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="energy" id="e1" value="1"/>
+                        <label for="e1">光能型(充能速度3%/s)</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="energy" id="e2" value="2"/>
+                        <label for="e2">永久型(充能速度4%/s)</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>轨道1</td>
+                    <td><button class="button" data-target="1" >create</button></td>
+                    <td><button class="button" data-target="1" >fly</button></td>
+                </tr>
+                <tr>
+                    <td>轨道2</td>
+                    <td><button class="button" data-target="2" >create</button></td>
+                    <td><button class="button" data-target="2" >fly</button></td>
+                </tr>
+                <tr>
+                    <td>轨道3</td>
+                    <td><button class="button" data-target="3" >create</button></td>
+                    <td><button class="button" data-target="3" >fly</button></td>
+                </tr>
+                <tr>
+                    <td>轨道4</td>
+                    <td><button class="button" data-target="4" >create</button></td>
+                    <td><button class="button" data-target="4" >fly</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="circle" id="track4">
+
+        </div>
+        <div class="circle" id="track3">
+
+        </div>
+        <div class="circle" id="track2">
+
+        </div>
+        <div class="circle" id="track1">
+
+        </div>
+        <div class="circle" id="earth">
+
+        </div>
+        <div id="console">
+
+        </div>
+    </div>
+
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript">
+    //存放飞船对象的数组
+    var shipList=[];
+    //动力系统数组
+    var powerList=[[3,5,"前进号"],[5,7,"奔腾号"],[8,9,"超越号"]];
+    //能源系统数组
+    var energyList=[[2,"劲量型"],[3,"光能型"],[4,"永久型"]];
+    var commandList=["fly","stop","destroy"];
+    //重写console.log
+    window.console.log=function(str,color){
+           $("#console").append('<p style="color: '+color+';">'+str+'</p>');
+    };
+    //飞船工厂
+    function spaceShipFactory(track,powerType,energyType) {
+        var spaceShip = {
+            id: track,
+            energy: 100,
+            isStop: true,
+            destroy: false,
+            deg: 0,
+            energyTimeout:null,
+            rotateTimeout:null,
+            degPlus:powerList[powerType][0],
+            energyCost:powerList[powerType][1],
+            energyPlus:energyList[energyType][0],
+            //发射飞船
+            sendShip: function () {
+                this.energySystem();
+                this.rotateSystem();
+                $("#track"+track).append("<div class='ship' id='ship"+track+"'><div class='energy'>"+this.nameSystem()+"</div></div>")
+            },
+            nameSystem:function(){
+                return "<span>"+this.id+"号-"+this.energy+"%</span>";
+            },
+            powerSystem: function (command) {
+                if (command == "stop") {
+                    this.isStop = true;
+                } else if (command == "fly") {
+                    this.isStop = false;
+                }
+            },
+            energySystem: function () {
+                this.energy += this.energyPlus;
+                if (this.energy >= 100)
+                    this.energy = 100;
+                if (!this.isStop) {
+                    this.energy -= this.energyCost;
+                }
+                if (this.energy <= 0) {
+                    console.log(this.id+"号飞船耗尽燃料，停止飞行！","red");
+                    this.energy = 0;
+                    this.isStop = true;
+                }
+                $("#ship"+this.id+" .energy").css({width:""+this.energy+"px"}).html(this.nameSystem());
+               this.energyTimeout=setTimeout(this.energySystem.bind(this), 1000);
+            },
+            rotateSystem:function(){
+              if(!this.isStop) {
+                  this.deg+=this.degPlus;
+                  $("#track" + this.id).css({transform: "rotate(" + this.deg + "deg)"});
+              }
+                this.rotateTimeout=setTimeout(this.rotateSystem.bind(this), 100);
+            },
+            messageSystem: function (obj) {
+                if (obj.id == this.id) {
+                    switch (obj.command) {
+                        case "stop":
+                            this.powerSystem(obj.command);
+                            break;
+                        case "fly":
+                            this.powerSystem(obj.command);
+                            break;
+                        case "destroy":
+                            this.selfDestroy(obj.command);
+                            break;
+                        default :
+                            return;
+                    }
+                } else {
+                    return;
+                }
+            },
+            //10进制信息转换器
+            adapter:function(message){
+                var id=parseInt(message.slice(0,4),2).toString();
+                var command=commandList[parseInt(message.slice(4),2).toString()];
+                var obj={"id":id,"command":command};
+                this.messageSystem(obj);
+            },
+            selfDestroy: function (command) {
+                if (!this.destroy && command == "destroy") {
+                    this.destroy = true;
+                    $("#track" + this.id).css({transform: "rotate(0deg)"});
+                    clearTimeout(this.energyTimeout);
+                    clearTimeout(this.rotateTimeout);
+                    shipList = shipList.filter(function (v) {
+                        if(v.id==this.id) {
+                            v=null;
+                        }else
+                            return true;
+                    });
+                    $("#ship"+this.id).remove();
+                };
+            }
+        };
+            return spaceShip;
+    };
+    //传播介质
+    function BUS(id,content){
+        if(Math.random()<=0.1){
+            arguments.callee(id,content);
+        }else{
+            var message=parseInt(id).toSendMessage(2)+commandList.indexOf(content).toSendMessage(2);
+            setTimeout(function(){
+                shipList.forEach(function(v){
+                        v.adapter(message);
+                });
+            },300);
+        }
+       // console.log(JSON.stringify(shipList))
+    };
+    //转四位二进制数的方法
+    Number.prototype.toSendMessage=function(num){
+        var message=this.toString(num);
+        var zeros="";
+        for(var i=0;i<4-message.length;i++){
+            zeros+="0";
+        }
+        return zeros+message;
+    }
+    //绑定指令事件
+    $(".button").bind("click",function(){
+        var id=$(this).data("target");
+        var content=$(this).html();
+        var powerType=$("input[name=power]:checked").val();
+        var energyType=$("input[name=energy]:checked").val();
+        switch (content){
+            case "create":
+                    if(!$("#ship"+id).html()) {
+                        var ship = spaceShipFactory(id,powerType,energyType);
+                        shipList.push(ship);
+                        ship.sendShip();
+                        console.log("飞船发射成功","green");
+                    }else
+                        console.log("创建失败,轨道上已有飞船！","red");
+                $(this).html("destroy");
+                break;
+            case "destroy":
+                BUS(id,"destroy");
+                $(this).html("create");
+                break;
+            case "fly":
+                BUS(id,"fly");
+                $(this).html("stop");
+                break;
+            case "stop":
+                BUS(id,"stop");
+                $(this).html("fly");
+                break;
+        }
+    });
+</script>
+</body>
+</html>

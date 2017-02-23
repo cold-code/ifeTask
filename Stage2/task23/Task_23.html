@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>task_23</title>
+<style type="text/css">
+       body,
+       html {
+       	width:100%;
+       	margin: 0 auto;
+       	text-align: center;
+       }
+
+       #root {
+       	display: flex;
+       	display: -webkit-flex;
+       	display: -moz-flex;
+       	flex-direction: row;
+       	align-items: center;
+       	-webkit-align-items: center;
+       	-webkit-align-content: center;
+       	align-content: center;
+       	width: calc(100%-80px);
+       	height: 150px;
+       	margin: 20px 40px 0 40px;
+       	padding: 20px;
+       	box-sizing: border-box;
+       	-webkit-box-sizing: border-box;
+       	border: 1px solid blue;
+       	font-size: 20px;
+       }
+
+       .son {
+       	border: 1px solid black;
+       	margin-right: 5px;
+       	flex: 1 1 auto;
+       	-webkit-flex: 1 1 auto;
+       	height: 100%;
+       	box-sizing: border-box;
+       	-webkit-box-sizing: border-box;
+       	display: flex;
+       	display: -webkit-flex;
+       	display: -moz-flex;
+       	flex-direction: row;
+       	align-items: center;
+       	-webkit-align-items: center;
+       	-webkit-align-content: center;
+       	align-content: center;
+       	padding: 20px;
+       }
+
+       div {
+       	background: #fff;
+       }
+
+       input {
+       	background: #6699cc;
+       	border: 1px solid #6699cc;
+       	cursor: pointer;
+       }
+
+       .num {
+       	background: #fff;
+       }
+</style>
+</head>
+<body>
+	<fieldset>
+	  <legend>遍历选项</legend>
+	    <input type="button" id="DF" value="深度优先">
+	    <input type="button" id="BF" value="广度优先">
+	    <label>时间间隔<input type="text" id="input_num" class="num" value="1000">ms</label>
+	    <label>搜索<input type="text" id="input_text" class="num" placeholder="请输入搜索条件"></label>
+	    <input type="button" id="DF_search" value="深度优先搜索">
+	    <input type="button" id="BF_search" value="广度优先搜索">
+	</fieldset>
+	<div id="root">A
+	  <div class="son">B
+	    <div class="son">C
+	        <div class="son">D</div>
+	        <div class="son">E</div>
+	       </div>
+	       <div class="son">F</div>
+	      </div>
+	      <div class="son">G
+	        <div class="son">H</div>
+	      </div>
+	      <div class="son">I</div>
+	    </div>
+	  </div>
+	  <section id="show_part"></section>
+	  <script type="text/javascript" src="base.js"></script>
+	  <script type="text/javascript" src="queue.js"></script>
+	  <script type="text/javascript" src="task_23.js"></script>
+</body>
+</html>

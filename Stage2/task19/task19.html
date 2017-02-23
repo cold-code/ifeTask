@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>任务19基础队列（排序版本）</title>
+    <style>
+        #input-container{
+            text-indent:1em;
+            width:200px;
+            margin-right: 20px;
+        }
+        input[type="button"]{
+            margin-right:10px;
+        }
+        #data-list ul{
+            padding:20px;
+            width:100%;
+            height:500px;
+            display: flex;
+            flex-wrap:nowrap;
+            background:#ddd;
+        }
+        .data-list__item{
+            align-self:flex-end;
+            margin:0 1px 0 0;
+            padding:0;
+            list-style:none;
+            width:30px;
+            background:tomato;
+            transition:background 0.5s;
+        }
+        .data-list__item.change{
+            background:#fff;
+        }
+        .data-list__item.finish{
+            background:rgb(84, 152, 222);
+        }
+    </style>
+</head>
+<body>
+    <input type="number" id="input-container" placeholder="请输入数字">
+    <input type="button" id="left-in" value="左侧入">
+    <input type="button" id="right-in" value="右侧入">
+    <input type="button" id="left-out" value="左侧出">
+    <input type="button" id="right-out" value="右侧出">
+    <input type="button" id="sort-btn" value="插入排序">
+    <div id="data-list">
+        <ul>
+        </ul>
+    </div>
+    <script src='task19.js'></script>
+</body>
+</html>

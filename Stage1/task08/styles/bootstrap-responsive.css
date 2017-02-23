@@ -1,0 +1,112 @@
+html,body {
+	margin: 0;
+	padding: 0;
+}
+
+.box {
+	box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	padding:10px;
+}
+
+.row:before,
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+[class*='col-'] {
+	box-sizing: border-box;
+	float:left;
+	background-color: #eee;
+	border:1px solid #999;
+	height: 50px;
+	margin: 10px;
+	font-size:12px;
+	text-align: center;
+	line-height: 50px;
+}
+
+/* 媒体选择大于768px设备 */
+@media (min-width: 769px) {
+	.col-md-1{
+		/* 100%等分成12份，1份为8.33% */
+		/* border-box模式下widh值减去左右padding值为实际width值 */
+		width:calc(8.333% - 20px);
+		-webkit-width:calc(8.33% - 20px);
+		-moz-width:calc(8.33% - 20px);
+		-o-width:calc(8.33% - 20px);
+		-ms-width:calc(8.33% - 20px);
+	}
+	.col-md-2{
+		width:calc(16.666% - 20px);
+		-webkit-width:calc(16.666% - 20px);
+		-moz-width:calc(16.666% - 20px);
+		-o-width:calc(16.666% - 20px);
+		-ms-width:calc(16.666% - 20px);
+	}
+	.col-md-3{
+		width:calc(25% - 20px);
+		-webkit-width:calc(25% - 20px);
+		-moz-width:calc(25% - 20px);
+		-o-width:calc(25% - 20px);
+		-ms-width:calc(25% - 20px);
+	}
+	.col-md-4{
+		width:calc(33.333% - 20px);
+		-webkit-width:calc(33.333% - 20px);
+		-moz-width:calc(33.333% - 20px);
+		-o-width:calc(33.333% - 20px);
+		-ms-width:calc(33.333% - 20px);
+	}
+	.col-md-6{
+		width: calc(50% - 20px);
+		-webkit-width: calc(50% - 20px);
+		-moz-width: calc(50% - 20px);
+		-o-width: calc(50% - 20px);
+		-ms-width: calc(50% - 20px);
+	}
+}
+/* 媒体识别为小于768px */
+@media (max-width:768px ) {
+	.col-sm-2{
+		width:calc(16.666% - 20px);
+		-webkit-width:calc(16.666% - 20px);
+		-moz-width:calc(16.666% - 20px);
+		-o-width:calc(16.666% - 20px);
+		-ms-width:calc(16.666% - 20px);
+	}
+	.col-sm-3{
+		width:calc(25% - 20px);
+		-webkit-width:calc(25% - 20px);
+		-moz-width:calc(25% - 20px);
+		-o-width:calc(25% - 20px);
+		-ms-width:calc(25% - 20px);
+	}
+    .col-sm-6{
+		width:calc(50% - 20px);
+		-webkit-width:calc(50% - 20px);
+		-moz-width:calc(50% - 20px);
+		-o-width:calc(50% - 20px);
+		-ms-width:calc(50% - 20px);
+	}
+    .col-sm-8{
+		width:calc(66.666% - 20px);
+		-webkit-width:calc(66.666% - 20px);
+		-moz-width:calc(66.666% - 20px);
+		-o-width:calc(66.666% - 20px);
+		-ms-width:calc(66.666% - 20px);
+	}
+    .col-sm-12{
+		width:calc(100% - 20px);
+		-webkit-width:calc(100% - 20px);
+		-moz-width:calc(100% - 20px);
+		-o-width:calc(100% - 20px);
+		-ms-width:calc(100% - 20px);
+	}
+
+}

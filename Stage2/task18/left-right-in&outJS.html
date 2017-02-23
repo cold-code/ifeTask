@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模拟基础队列</title>
+    <style>
+        #input-container{
+            text-indent:1em;
+            width:200px;
+            margin-right: 20px;
+        }
+        input[type="button"]{
+            margin-right:10px;
+        }
+        ul{padding:0;}
+        .data-list__item{
+            padding:0 8px;
+            list-style:none;
+            float:left;
+            text-align: center;
+            margin-right:10px;
+            min-width:34px;
+            height:50px;
+            color:#fff;
+            font-size:18px;
+            line-height:50px;
+            background:red;
+        }
+    </style>
+</head>
+<body>
+    <input type="number" id="input-container" placeholder="请输入数字">
+    <input type="button" id="left-in" value="左侧入">
+    <input type="button" id="right-in" value="右侧入">
+    <input type="button" id="left-out" value="左侧出">
+    <input type="button" id="right-out" value="右侧出">
+    <div id="data-list">
+        <ul>
+        </ul>
+    </div>
+    <script src='task.js'></script>
+</body>
+</html>

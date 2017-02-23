@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task-2-24</title>
+	<style type="text/css">
+		html, body {
+			width: 100%;
+			height: 100%;
+			text-align: center;
+		}
+		button {
+			border:0;
+			box-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+			padding: 5px;
+			margin:20px 5px;
+			cursor: pointer;
+			background-color: #6699cc;
+		}
+		button:active {
+			box-shadow: 0 0 5px rgba(0,0,0,0.5);
+		}
+		div {
+			float: left;
+			padding: 20px;
+			margin: 10px;
+			border: 1px solid #000;
+			background-color: #fff;
+			color: #000;
+			cursor: pointer;
+		}
+		.selected{
+			background-color: rgb(210,210,210);
+		}
+		.default{
+			background-color: #fff;
+			color: black;
+		}
+		.active {
+			background-color: blue;
+			color: #fff;
+		}
+		.found {
+			background-color: red;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<button>深度优先遍历</button>
+	<button>广度优先遍历</button>
+	<input placeholder="请输入大写英文字母" />
+	<button>深度优先搜索</button>
+	<button>广度优先搜索</button>
+	<input  placeholder="过多结点造成溢出"/>
+	<button>添加节点</button>
+	<button>删除节点</button>
+	<section>
+		<div id="root">
+			MAIN
+			<div>
+				A
+				<div>
+					B
+					<div>C</div>
+					<div>D</div>
+					<div>E</div>
+					<div>F</div>
+				</div>
+				<div>G</div>
+				<div>
+					<div>H</div>
+					<div>I</div>
+				</div>
+			</div>
+			<div>
+				J
+				<div>
+					K
+					<div>L</div>
+					<div>M</div>
+					<div>N</div>
+				</div>
+				<div>
+					O
+					<div>
+						P
+						<div>Q</div>
+					</div>
+					<div>R</div>
+				</div>
+			</div>
+			<div>S</div>
+		</div>
+	</section>
+
+	<script type="text/javascript" src="task_24.js"></script>
+</body>
+</html>

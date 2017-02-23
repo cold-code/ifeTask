@@ -1,0 +1,35 @@
+
+h1,h2,strong {
+  color:           #333;
+  border-bottom:   thin dotted #999;
+}
+a {
+  color:           #e81c4f;
+}
+body {
+  color:           #566b78;
+}
+article {
+  background-color:#ccc
+}
+table {
+  border-color:     #566b78;
+}
+td,th {
+  border-color:     #566b78;
+}
+a:link {
+  color: #445;
+  background-color: #69C0C2;
+}
+a:visited {
+  color: #345;
+  background-color: #69C0C2;
+}
+a:hover {
+  color: #667;
+  background-color: #fb5
+}
+a:active {
+  color: #778;
+  background-color: #ec8;
